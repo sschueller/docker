@@ -42,6 +42,7 @@ RUN set -x && env DEBIAN_FRONTEND=noninteractive apt-get update \
     python-django-auth-ldap \
     gettext \
     postgresql-client \
+    mysql-client \
     mercurial \
     git \
     git-svn \
