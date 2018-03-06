@@ -57,20 +57,20 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         # Use 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': '', os.environ['DB_ENGINE', 'django.db.backends.postgresql_psycopg2'],
         # Database name or path to database file if using sqlite3.
-        'NAME': os.environ['POSTGRES_DATABASE'],
+        'NAME': os.environ['DB_NAME'],
         # Use same database for tests (needed as Docker MySQL can
         # not currently create second database for us)
-        'TEST': {'NAME': os.environ['POSTGRES_DATABASE']},
+        'TEST': {'NAME': os.environ['DB_NAME']},
         # Database user, not used with sqlite3.
-        'USER': os.environ['POSTGRES_USER'],
+        'USER': os.environ['DB_USER'],
         # Database password, not used with sqlite3.
-        'PASSWORD': os.environ['POSTGRES_PASSWORD'],
+        'PASSWORD': os.environ['DB_PASSWORD'],
         # Set to empty string for localhost. Not used with sqlite3.
-        'HOST': os.environ['POSTGRES_HOST'],
+        'HOST': os.environ['DB_HOST'],
         # Set to empty string for default. Not used with sqlite3.
-        'PORT': os.environ['POSTGRES_PORT'],
+        'PORT': os.environ['DB_PORT'],
         # Wrap each view in a transaction on this database
         'ATOMIC_REQUESTS': True,
     }
