@@ -39,7 +39,7 @@ fi
 
 # Wait for database to get available
 
-if [ "$DB_ENGINE" = "mysql" ] ; then
+if [ "$DB_ENGINE" = "django.db.backends.mysql" ] ; then
     TIMEOUT=0
     until mysql -h "$DB_HOST" -P "$DB_PORT" -D "$DB_DATABASE" -u "$DB_USER" -p"$DB_PASSWORD" -e "use ${DB_DATABASE}" > /dev/null 2>&1 ; do
         >&2 echo "MySQL is unavailable - sleeping"
@@ -50,7 +50,7 @@ if [ "$DB_ENGINE" = "mysql" ] ; then
         fi
         sleep 1
     done
-else
+elif [ "$DB_ENGINE" = "django.db.backends.postgresql_psycopg2" ] ; then
     TIMEOUT=0
     until psql -h "$DB_HOST" -p "$DB_PORT" -d "$DB_DATABASE" -U "$DB_USER" -c 'SELECT 1' > /dev/null 2>&1 ; do
         >&2 echo "Postgres is unavailable - sleeping"
