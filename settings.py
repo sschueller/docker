@@ -705,12 +705,12 @@ CHECK_LIST = (
 )
 
 # List of automatic fixups
- AUTOFIX_LIST = (
+# AUTOFIX_LIST = (
 #     'weblate.trans.autofixes.whitespace.SameBookendingWhitespace',
 #     'weblate.trans.autofixes.chars.ReplaceTrailingDotsWithEllipsis',
 #     'weblate.trans.autofixes.chars.RemoveZeroSpace',
 #     'weblate.trans.autofixes.chars.RemoveControlChars',
- )
+# )
 
 # List of enabled addons
 # WEBLATE_ADDONS = (
