@@ -40,6 +40,7 @@ RUN set -x && env DEBIAN_FRONTEND=noninteractive apt-get update \
     python-rcssmin \
     python-rjsmin \
     python-django-auth-ldap \
+    python-mysqldb \
     gettext \
     postgresql-client \
     mysql-client \
