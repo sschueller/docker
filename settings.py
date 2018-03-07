@@ -671,7 +671,7 @@ SIMPLIFY_LANGUAGES = os.environ.get('WEBLATE_SIMPLIFY_LANGUAGES', '1') == '1'
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 # List of quality checks
-# CHECK_LIST = (
+CHECK_LIST = (
 #     'weblate.trans.checks.same.SameCheck',
 #     'weblate.trans.checks.chars.BeginNewlineCheck',
 #     'weblate.trans.checks.chars.EndNewlineCheck',
@@ -692,25 +692,25 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 #     'weblate.trans.checks.format.JavascriptFormatCheck',
 #     'weblate.trans.checks.consistency.PluralsCheck',
 #     'weblate.trans.checks.consistency.SamePluralsCheck',
-#     'weblate.trans.checks.consistency.ConsistencyCheck',
-#     'weblate.trans.checks.consistency.TranslatedCheck',
+     'weblate.trans.checks.consistency.ConsistencyCheck',
+     'weblate.trans.checks.consistency.TranslatedCheck',
 #     'weblate.trans.checks.chars.NewlineCountingCheck',
 #     'weblate.trans.checks.markup.BBCodeCheck',
-#     'weblate.trans.checks.chars.ZeroWidthSpaceCheck',
-#     'weblate.trans.checks.markup.XMLValidityCheck',
+     'weblate.trans.checks.chars.ZeroWidthSpaceCheck',
+     'weblate.trans.checks.markup.XMLValidityCheck',
 #     'weblate.trans.checks.markup.XMLTagsCheck',
 #     'weblate.trans.checks.source.OptionalPluralCheck',
-#     'weblate.trans.checks.source.EllipsisCheck',
+     'weblate.trans.checks.source.EllipsisCheck',
 #     'weblate.trans.checks.source.MultipleFailingCheck',
-# )
+)
 
 # List of automatic fixups
-# AUTOFIX_LIST = (
+ AUTOFIX_LIST = (
 #     'weblate.trans.autofixes.whitespace.SameBookendingWhitespace',
 #     'weblate.trans.autofixes.chars.ReplaceTrailingDotsWithEllipsis',
 #     'weblate.trans.autofixes.chars.RemoveZeroSpace',
 #     'weblate.trans.autofixes.chars.RemoveControlChars',
-# )
+ )
 
 # List of enabled addons
 # WEBLATE_ADDONS = (
