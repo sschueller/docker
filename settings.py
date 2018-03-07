@@ -59,18 +59,18 @@ DATABASES = {
         # Use 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'ENGINE': os.environ.get('DB_ENGINE', 'django.db.backends.postgresql_psycopg2'),
         # Database name or path to database file if using sqlite3.
-        'NAME': os.environ['DB_NAME'],
+        'NAME': os.environ.get('DB_NAME', ''),
         # Use same database for tests (needed as Docker MySQL can
         # not currently create second database for us)
-        'TEST': {'NAME': os.environ['DB_NAME']},
+        'TEST': {'NAME': os.environ.get('DB_NAME', ''),},
         # Database user, not used with sqlite3.
-        'USER': os.environ['DB_USER'],
+        'USER': os.environ.get('DB_USER', ''),
         # Database password, not used with sqlite3.
-        'PASSWORD': os.environ['DB_PASSWORD'],
+        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
         # Set to empty string for localhost. Not used with sqlite3.
-        'HOST': os.environ['DB_HOST'],
+        'HOST': os.environ.get('DB_HOST', ''),
         # Set to empty string for default. Not used with sqlite3.
-        'PORT': os.environ['DB_PORT'],
+        'PORT': os.environ.get('DB_PORT', ''),
         # Wrap each view in a transaction on this database
         'ATOMIC_REQUESTS': True,
     }
